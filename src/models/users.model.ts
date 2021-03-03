@@ -13,13 +13,14 @@ export default function (app: Application): Model<any> {
     email: { type: String, unique: true, lowercase: true, required: true  },
     password: { type: String, required: true  },
     age: {type: Number, required: true },
-    genre: {type: String},
+    genre: {type: String, enum:['m','f','a']},
     rayonRecherche: {type: Number},
     position:{
       latitude: {type: Number},
       longitude: {type: Number},
     },
     typeRecherche: [String],
+    role: {type: String, enum: ['jeune','adelphe','modo','admin']},
   }, {
     timestamps: true
   });
