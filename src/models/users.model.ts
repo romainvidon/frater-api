@@ -21,6 +21,8 @@ export default function (app: Application): Model<any> {
     },
     typeRecherche: [String],
     role: {type: String, enum: ['jeune','adelphe','modo','admin']},
+    bio: {type: String},
+    visible: {type: Boolean},
   }, {
     timestamps: true
   });
